@@ -4,20 +4,38 @@
 <title>Gabriel Faes</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="I'm a Game Developer interested in any and all opportunities.">
+<link rel="shortcut icon" href="img/favicon.png">
+<meta name='author' content='Gabriel Faes'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css.css">
 </head>
-<body class="all">
 
-<div class="navbar">
-    <a href="index.html" class="left">GABRIEL FAES</a>
-    <a href="reviews.html" class="right">Game Reviews</a>
-    <a href="things_done.html" class="right">What I've Done</a>
-    <a href="cv.html" class="right">Curriculum Vitae</a>
-</div>
+<body>
+<header class="header" role="banner">
+    <div class="header-inner">
+        <a class="brand left" href="index.html" rel="home">Gabriel Faes</a>
+
+        <a href="#" class="burger-menu nofollow" alt="menu"><span></span></a>
+        <nav class="navbar right" role="navigation">
+            <ul class="menu">
+                <li><a href="reviews.html">Game Reviews</a></li>
+                <li><a href="things_done.html">What I've Done</a></li>
+                <li><a href="cv.html">Curriculum Vitae</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+<article>
 
 <div class="content">
     <p>
-        This page is still unfinished, but I think it still serves as a nice introduction about AI, 
+        <b>This page is still unfinished</b>, but I think it still serves as a nice introduction about AI, 
         or you can scroll down to get to my opinions directly if you're aware of the differences between different AIs already.
     </p>
     <h3>AI, What It Is, and What It Is Not</h3>
@@ -42,7 +60,7 @@
         Finally, generative AI is a learning AI which generally uses multi-layered neural networks (deep learning) to generate "something" (typically words or images)
         from human readable input. The goal of generative AI is to mimic its training data in its output. The difficulty comes from using input which it might never have
         encountered in its training data, yet, numerous Large Language Models (LLMs) and visual models now manage to do it quite flawlessly. Being able to generate such 
-        consistent and natural speech and images is a marvel of engineering which I still don't fully understand and that we should not take for granted.
+        consistent and natural speech and images is a marvel of engineering which I still don't fully understand and that we too easily take for granted.
     </p>
     <p>
         So, to recap, there's AI, which has two main branches: static, and learning AI. The learning AI models use Machine Learning and training data. Some learning AI models are
@@ -68,8 +86,11 @@
         except not with a dictionary, but with all the (right and wrong) information on the internet.
     </p>
 </div>
+</article>
+</main>
 
-<div class="footer">
+<footer class="footer">
+<div>
     <p>
         I made this website myself! Which means it's visually questionable, but I've learned quite a bit of HTML and CSS
         doing it, and have a deeper appreciation for the poor frontend devs.
@@ -79,8 +100,29 @@
         <a href="ai.html">here</a>.
     </p>
     <p>Anything on this website is strictly my own opinion (and not that of my employer, colleagues, friends, family, or anyone else) unless expressely stated otherwise.</p>
-    <p>Made by Gabriel Faes, All Rights Reserved</p>
+    <p class="copyright">© 2025 | Made by Gabriel Faes, All Rights Reserved</p>
 </div>
+</footer>
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js' id='jquery-js'></script>
+<script type="text/javascript">
+    // Menu burger
+    $(document).ready(function () {
+        $('.burger-menu').click(function (e) {
+            e.preventDefault();
+            if (!$(this).hasClass('active')) {
+                $('.burger-menu').removeClass('active');
+                $('body').removeClass('no-scroll');
+                $('header').removeClass('active');
+                $('.navbar').removeClass('active');
+            }
+            $('.burger-menu').toggleClass('active');
+            $('body').toggleClass('no-scroll');
+            $('header').toggleClass('active');
+            $('.navbar').toggleClass('active');
+        });
+    });
+</script>
 
 </body>
 </html>

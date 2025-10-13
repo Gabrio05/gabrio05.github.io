@@ -4,30 +4,53 @@
 <title>Gabriel Faes</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="I'm a Game Developer interested in any and all opportunities.">
+<link rel="shortcut icon" href="img/favicon.png">
+<meta name='author' content='Gabriel Faes'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css.css">
 </head>
-<body class="all">
 
-<div class="navbar">
-    <a href="index.html" class="left">GABRIEL FAES</a>
-    <a href="reviews.html" class="right">Game Reviews</a>
-    <a href="things_done.html" class="right">What I've Done</a>
-    <a href="cv.html" class="right">Curriculum Vitae</a>
-</div>
+<body>
+<header class="header" role="banner">
+    <div class="header-inner">
+        <a class="brand left" href="index.html" rel="home">Gabriel Faes</a>
+
+        <a href="#" class="burger-menu nofollow" alt="menu"><span></span></a>
+        <nav class="navbar right" role="navigation">
+            <ul class="menu">
+                <li><a href="reviews.html">Game Reviews</a></li>
+                <li><a href="things_done.html">What I've Done</a></li>
+                <li><a href="cv.html">Curriculum Vitae</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+<article>
 
 <div class="content">
     <p>
-        Here are a bunch of reviews I wrote. I try to do one every weekend, but as you can tell, that doesn't really work. 
+        Here are a couple of reviews I wrote. I try to do one every weekend, but as you can tell, that doesn't really work. 
         But still, have fun reading! You can ctrl+f to maybe find a game or companies you like.
+        (I still need to setup this page actually! Making cool pages on a website is a lot of work apparently!)
     </p>
 
     <h3 class="right">20th February 2018</h3>
     <h1>The Station</h1>
     <h2>The Station Game ltd.</h2>
-
+    <br />
 </div>
 
-<div class="footer">
+</article>
+</main>
+
+<footer class="footer">
+<div>
     <p>
         I made this website myself! Which means it's visually questionable, but I've learned quite a bit of HTML and CSS
         doing it, and have a deeper appreciation for the poor frontend devs.
@@ -37,8 +60,29 @@
         <a href="ai.html">here</a>.
     </p>
     <p>Anything on this website is strictly my own opinion (and not that of my employer, colleagues, friends, family, or anyone else) unless expressely stated otherwise.</p>
-    <p>Made by Gabriel Faes, All Rights Reserved</p>
+    <p class="copyright">© 2025 | Made by Gabriel Faes, All Rights Reserved</p>
 </div>
+</footer>
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js' id='jquery-js'></script>
+<script type="text/javascript">
+    // Menu burger
+    $(document).ready(function(){
+        $('.burger-menu').click(function(e){
+        e.preventDefault();
+            if (! $(this).hasClass('active')) {
+                    $('.burger-menu').removeClass('active');
+                    $('body').removeClass('no-scroll');
+                    $('header').removeClass('active');
+                    $('.navbar').removeClass('active');
+                }
+            $('.burger-menu').toggleClass('active');
+            $('body').toggleClass('no-scroll');
+            $('header').toggleClass('active');
+            $('.navbar').toggleClass('active');
+        });
+    });
+</script>
 
 </body>
 </html>
