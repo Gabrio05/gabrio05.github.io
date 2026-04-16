@@ -267,15 +267,35 @@ main {
 	margin: 0 auto 0px auto;
 	max-width: 860px;
 	padding: 60px 30px;
+	text-align: justify;
 }
 
 .content ul li {
 	margin: 0 0 .5rem;
 }
 
+.content iframe {
+	margin: 0 1.5rem;
+	border: 2px solid #808080;
+}
+
+.content details {
+	margin: 1.0rem 0;
+}
+
 .date {
 	float: right;
 	padding: 30px 0 0 0;
+}
+
+.released {
+	float: right;
+	margin: 10px 0;
+	padding: 15px 0;
+}
+
+.notopmargin {
+	margin: 0 0 15px 0;
 }
 
 
